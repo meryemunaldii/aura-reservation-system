@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; 
+    background-image: radial-gradient(circle at center, #2d3436 0%, #000000 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    padding: 1.2rem 5%;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #d4af37; 
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+.filters {
+    background: #252525;
+    margin: 2rem 5%;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+input, select {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #444;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+button {
+    background: #d4af37; /* Gold Buton */
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 2rem 5%;
+}
+
+.room-card {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 5px; 
+    padding: 25px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.room-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.room-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+.progress-bg {
+    background: #333;
+    height: 6px;
+}
+
+.progress-fill {
+    background: #d4af37; 
+}
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; top: 0;
+            width: 100%; height: 100%; 
+            background-color: rgba(0,0,0,0.85); 
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: #1e1e1e;
+            margin: 10% auto;
+            padding: 25px;
+            border: 2px solid #d4af37;
+            width: 400px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            right: 20px; top: 15px;
+            color: #d4af37;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-btn:hover { color: #fff; }
+        .modal-reserve-btn {
+            width: 100%;
+            padding: 12px;
+            background: #d4af37;
+            border: none;
+            color: #121212;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }

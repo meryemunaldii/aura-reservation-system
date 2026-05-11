@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #050505; 
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    color: #c5a059; 
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 4px;
+}
+
+.table-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    background: #111111;
+    border-radius: 8px;
+    border: 1px solid #c5a059;
+    box-shadow: 0 0 30px rgba(197, 160, 89, 0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #c5a059;
+}
+
+th {
+    padding: 20px;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background-color: #1a1a1a !important;
+}
+
+td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #222;
+    color: #d1d1d1;
+    font-size: 0.9rem;
+}
+
+.stars-cell {
+    color: #c5a059;
+    font-size: 1.1rem;
+}
+
+/* Buton Grupları */
+.nav-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.btn-main {
+    background: transparent;
+    color: #c5a059;
+    border: 1px solid #c5a059;
+}
+
+.btn-main:hover {
+    background: #c5a059;
+    color: #000;
+}
+
+/* Tablo İçi İşlem Butonları */
+.edit-btn, .delete-btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.edit-btn { color: #c5a059; border: 1px solid #c5a059; margin-right: 5px; }
+.edit-btn:hover { background: #c5a059; color: #000; }
+
+.delete-btn { color: #ff4444; border: 1px solid #ff4444; }
+.delete-btn:hover { background: #ff4444; color: #fff; }
+
+.aura-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 50px;
+    border-bottom: 1px solid #c5a059;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-family: 'Cinzel', serif;
+    color: #c5a059;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: #c5a059;
+}
+
+.logout-btn {
+    color: #ff4444 !important;
+    border: 1px solid #ff4444;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.logout-btn:hover {
+    background: #ff4444;
+    color: #fff !important;
+}
+
+body {
+    padding-top: 0 !important; 
+}
+
+.star-rating {
+    display: flex !important;
+    flex-direction: row-reverse !important; 
+    justify-content: center !important;
+    gap: 15px !important;
+    margin: 20px 0 !important;
+}
+
+
+.star-rating input[type="radio"] {
+    position: absolute !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    pointer-events: none !important;
+}
+
+
+.star-rating label.star {
+    font-size: 3rem !important;
+    color: #333 !important; 
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    line-height: 1 !important;
+}
+
+.star-rating label.star:hover,
+.star-rating label.star:hover ~ label.star,
+.star-rating input:checked ~ label.star {
+    color: #c5a059 !important; 
+    text-shadow: 0 0 15px rgba(197, 160, 89, 0.4) !important;
+}

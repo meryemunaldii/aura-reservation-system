@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Reservation | Ana Sayfa</title>
+<link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AURA RESERVATION</div>
+        <ul class="nav-links">
+            <li><span>Hoş geldin <b id="userNameDisplay">Yükleniyor...</b></span></li>
+            <li><a href="gecmis_rezervasyonlar.html">Geçmiş Rezervasyonlar</a></li>
+            <li><a href="islem_gecmisi.html">İşlem Geçmişi</a></li>
+            <li><a href="feedback.php">Geri Bildirim</a></li>
+            <li><a href="profil.php">Profil</a></li>
+            <li><a href="logout.php" class="logout-btn">Çıkış Yap</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <section class="filters">
+            <h3>Oda Ara</h3>
+            <form id="filterForm" onsubmit="event.preventDefault(); loadRooms();">
+                <input type="date" id="filterDate" name="tarih" required>
+                
+                <select id="filterTime" name="saat">
+                    <option value="09:00:00">09:00 - 10:00</option>
+                    <option value="10:00:00">10:00 - 11:00</option>
+                    <option value="11:00:00">11:00 - 12:00</option>
+                    <option value="12:00:00">12:00 - 13:00</option>
+                    <option value="13:00:00">13:00 - 14:00</option>
+                    <option value="14:00:00">14:00 - 15:00</option>
+                    <option value="15:00:00">15:00 - 16:00</option>
+                    <option value="16:00:00">16:00 - 17:00</option>
+                </select>
+                
+                <select id="filterType" name="oda_tipi">
+                    <option value="">Tüm Odalar</option>
+                    <option value="Individual">Bireysel Çalışma</option>
+                    <option value="Group">Grup Çalışma</option>
+                    <option value="Seminar">Toplantı Odası</option>
+                </select>
+                
+                <button type="button" onclick="loadRooms()">ODALARI LİSTELE</button>
+                <button type="button" onclick="sifirlaForm()">TEMİZLE</button>
+            </form>
+        </section>
+
+        <section id="roomContainer" class="room-grid"></section>
+    </div>
+
+    <div id="roomDetailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalRoomNo" style="margin-top:0;">Oda Detayı</h2>
+            <div id="modalBody" style="margin-top:15px;">
+                </div>
+            <button id="modalReserveBtn" class="modal-reserve-btn">REZERVE ET</button>
+        </div>
+    </div>
+    
+<script>
+function sifirlaForm() {
+    document.getElementById("filterForm").reset();
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('filterDate').value = today;
+    
+    // Hatanın çözümü: loadRooms fonksiyonunun varlığını kontrol et
+    if (typeof loadRooms === "function") {
+        loadRooms();
+    } else {
+        console.log("loadRooms fonksiyonu henüz yüklenmedi.");
+    }
+}
+</script>
+
+    <script src="main.js"></script>
+</body>
+</html>

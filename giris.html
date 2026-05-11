@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Aura Reservation | Giriş Yap</title>
+    <link rel="stylesheet" href="giris.css">
+</head>
+<body>
+ <div class="login-container">
+        <div class="login-card">
+            <h1 class="logo-text">AURA</h1>
+            <p class="subtitle">Rezervasyon Sistemine Giriş Yapın</p>
+            
+            <form action="giris.php" method="POST" onsubmit="return validateLogin()">
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="E-posta" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" id="password" placeholder="Şifre" required>
+                </div>
+                <button type="submit" class="login-btn">GİRİŞ YAP</button>
+            </form>
+            
+            <p class="footer-text">Henüz üye değil misiniz? <a href="kayit.html">Kayıt Ol</a></p>
+        </div>
+    </div>
+    
+    <script>
+    function validateLogin() {
+        const email = document.getElementById('email').value;
+        if (!email.includes('@')) {
+            alert("Geçerli bir e-posta adresi girin!");
+            return false;
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>

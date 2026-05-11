@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Aura Reservation | Kayıt</title>
+    <link rel="stylesheet" href="kayit.css">
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>AURA</h2>
+        <p style="color: #888; margin-bottom: 20px; font-size: 0.9rem;">Yeni Üyelik Oluştur</p>
+        
+        <form action="kayit.php" method="POST" onsubmit="return validateForm()">
+            <input type="text" name="ad" placeholder="İsim" required>
+            <input type="text" name="soyad" placeholder="Soyisim" required>
+            
+            <select name="tip" required>
+                <option value="">Üyelik Tipi Seçiniz</option>
+                <option value="bireysel">Bireysel Kullanıcı</option>
+                <option value="kurumsal">Kurumsal / Akademik</option>
+            </select>
+            
+            <input type="email" name="mail" placeholder="E-posta Adresi" required>
+            <input type="tel" name="tel" placeholder="Telefon (05xx...)" required>
+            <input type="password" name="password" placeholder="Şifre Belirleyin" required>
+            
+            <button type="submit" class="btn-register">Kaydı Tamamla</button>
+        </form>
+        
+        <p class="login-link">Zaten üye misiniz? <a href="giris.html">Giriş Yap</a></p>
+    </div>
+
+    <script>
+        function validateForm() {
+            return true;
+        }
+    </script>
+
+</body>
+</html>

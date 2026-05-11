@@ -1,0 +1,91 @@
+/* Genel Ayarlar */
+body {
+    background-color: #050505;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Konteyner */
+.history-container {
+    width: 90%;
+    max-width: 900px;
+    background: #111111;
+    border: 1px solid #c5a059; /* Aura Gold */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: #c5a059;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.description {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Tablo Tasarımı */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.action-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.action-table th {
+    text-align: left;
+    border-bottom: 2px solid #c5a059;
+    padding: 15px;
+    color: #c5a059;
+    font-size: 0.85rem;
+}
+
+.action-table td {
+    padding: 15px;
+    border-bottom: 1px solid #222;
+    font-size: 0.95rem;
+}
+
+.date-cell {
+    color: #999;
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px !important;
+    color: #555;
+}
+
+/* Buton */
+.footer-actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-btn {
+    color: #c5a059;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 1px solid #c5a059;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #c5a059;
+    color: #000;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Aura | İşlem Geçmişi</title>
+    <link rel="stylesheet" href="islem_gecmisi.css">
+</head>
+<body>
+<div class="history-container">
+    <h2>HESAP HAREKETLERİ</h2>
+    <div id="historyTableContainer">
+        <!-- Veriler buraya gelecek -->
+    </div>
+    <a href="mainpage.html" class="back-link">Ana Sayfaya Dön</a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const container = document.getElementById('historyTableContainer');
+
+    fetch('islem_gecmisi.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                container.innerHTML = `<p style='color:red;'>${data.error}</p>`;
+                return;
+            }
+
+            if (data.length === 0) {
+                container.innerHTML = "<p style='color:gray; text-align:center;'>İşlem kaydı bulunamadı.</p>";
+                return;
+            }
+
+            let html = `
+                <table class="action-table">
+                    <thead>
+                        <tr>
+                            <th>İşlem Türü</th>
+                            <th>Tarih</th>
+                        </tr>
+                    </thead>
+                    <tbody>`;
+
+            data.forEach(item => {
+                html += `
+                    <tr>
+                        <td>${item.ActionType}</td>
+                        <td style="color:#aaa;">${item.ActionTime}</td>
+                    </tr>`;
+            });
+
+            html += `</tbody></table>`;
+            container.innerHTML = html;
+        })
+        .catch(err => {
+            console.error("Hata:", err);
+            container.innerHTML = "<p style='color:red;'>Veriler yüklenemedi.</p>";
+        });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    background-image: radial-gradient(circle at center, #2d3436 0%, #000000 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-container {
+    background: #222;
+    padding: 40px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.register-container h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d4af37;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+input, select {
+    width: 100%;
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #444;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #d4af37;
+}
+
+.btn-register {
+    width: 100%;
+    background: #d4af37;
+    color: black;
+    font-weight: 700;
+    border: none;
+    padding: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background: #f1c40f;
+    transform: translateY(-2px);
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #bdc3c7;
+}
+
+.login-link a {
+    color: #d4af37;
+    text-decoration: none;
+}
