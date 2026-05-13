@@ -55,7 +55,7 @@
 
     <div class="nav-buttons">
         <a href="mainpage.php" class="btn btn-main">Ana Sayfaya Dön</a>
-        <a href="feedback.html" class="btn btn-main">Yeni Geri Bildirim</a>
+        <a href="feedback.php" class="btn btn-main">Yeni Geri Bildirim</a>
     </div>
 
     <script src="feedback_list.js"></script>
