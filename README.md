@@ -6,7 +6,7 @@
 
     User Profile: Allows users to manage their personal information.
 
-    Make a Reservation: Book office spaces or desks for specific dates and times.
+    Make a Reservation: Book office spaces / desks for specific dates and times.
 
     Reservation Management: View and cancel existing reservations easily.
 
